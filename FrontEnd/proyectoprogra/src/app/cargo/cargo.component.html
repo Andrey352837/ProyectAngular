@@ -1,0 +1,15 @@
+<ul>
+    @for (cargo of cargos(); track cargo.id) {
+      <li>
+        {{ cargo.id }}
+        <input type="text"
+          (keydown.enter)="modificarCargo(cargo.id, $event)"
+          [value]="cargo.nombre"
+        />
+        <button (click)="borrarCargo(cargo.id)">Borra provincia {{ cargo.id }}</button>
+      </li>
+    } @empty {
+      <li>Nada que mostrar.</li>
+    }
+    <li><input placeholder="Agregar" type="text" (keydown.enter)="agregarCargo($event)" /></li>
+  </ul>

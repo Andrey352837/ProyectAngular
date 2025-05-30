@@ -1,0 +1,7 @@
+
+export interface DetalleFactura {
+    id?: number;
+    id_curso: number;
+    id_encabezadofactura?: number;
+    precio_unitario: number;
+}
